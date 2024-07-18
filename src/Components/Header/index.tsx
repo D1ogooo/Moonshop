@@ -1,6 +1,7 @@
-import { External, HeaderStyle, HR } from './style'
+import { External, HeaderStyle, HR, Link } from './style'
 import luaIcon from '/lua normal.png'
 import discordIcon from '/discordIcon.svg'
+import MoonIcon from '/Moonshop icon.png'
 
 export function Header () {
   return (
@@ -8,7 +9,7 @@ export function Header () {
     <External>
      <HeaderStyle>
       <div>
-       <img src={luaIcon}/>
+       <img src={MoonIcon}/>
       </div>
        <ul>
         <li>
@@ -21,10 +22,10 @@ export function Header () {
          <a href="#">Fale conosco</a>
         </li>
        </ul>
-       <button>
+       <Link target='_blank' href='https://discord.gg/3YpDJmrdK3'>
         <img src={discordIcon} alt="" />
         Comunidade
-       </button>
+       </Link>
      </HeaderStyle>
     </External>
     <HR />

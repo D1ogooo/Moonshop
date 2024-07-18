@@ -31,15 +31,20 @@ export const HeaderStyle = styled.header`
  }
 
  div:nth-child(1) {
-  height: 50px;
-  width: 50px;
+  border-radius: 40px;
+  height: 60px;
+  width: 60px;
+  background-color: #000;
+  text-align: center;
+  padding: 5px;
   img {
-   height: 40px;
-   width: 40px;
+   height: 50px;
+   width: 50px;
   }
  }
+`
 
- button {
+export const Link = styled.a`
   display: flex;
   align-items: center;
   gap: .5rem;
@@ -55,13 +60,14 @@ export const HeaderStyle = styled.header`
   font-size: .9rem;
   color: #C4C4C5;
   font-weight: 400;
+  text-decoration: none;
 
   img {
    width: 30px;
    height: 30px;
   }
- }
- button:hover{
+ 
+ &:hover {
   background: #015681;
   transition: 0.5s all;
  }
