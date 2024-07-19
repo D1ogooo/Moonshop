@@ -21,6 +21,9 @@ export function Header () {
         <li>
          <a href="#">Fale conosco</a>
         </li>
+        <li>
+         <a href="#">Nossa equipe</a>
+        </li>
        </ul>
        <Link target='_blank' href='https://discord.gg/3YpDJmrdK3'>
         <img src={discordIcon} alt="" />

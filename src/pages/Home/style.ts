@@ -54,11 +54,44 @@ export const Container = styled.div`
   width: 90%;
   margin: 0 auto;
   .precoProduto {
-    margin-top: 30px;
-    color: #8B8B8C;
-    font-weight: '200';
+    margin-left: -140px;
+    color: #fff;
+text-align: right;
+/* Text/Regular S */
+font-family: "Space Grotesk", sans-serif;
+font-size: 1rem;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 1.1375rem */
+    span {
+      color: #fff;
+/* Title/Title M */
+font-family: "Baloo 2";
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 800;
+line-height: 130%;
+    }
   }
+  .faleConosco {
+   margin-top: 35px;
+   font-family: "Baloo 2";
+   font-size: 18px;
+   text-decoration: underline;
+   color: #656A6E;
+   font-weight: 490;
+ }
 `;
+
+export const ContainerTitle = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ h1 {
+  margin-top: 2rem;
+ }
+`
 
 export const Planos = styled.div`
   display: flex;
@@ -93,7 +126,7 @@ export const Card = styled.section`
  
  h1 {
   text-align: center;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   margin-bottom: 16px;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.5rem;
@@ -130,12 +163,14 @@ export const Conteudo = styled.div`
  margin-top: 2rem;
  p {
   color: #656A6E;
-  font-size: 14px;
+  font-size: 15px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
  }
 `
 
 export const CompreAgora = styled.button`
- width: 200px;
+ width: 170px;
  height: 50px;
  background: none;
  border: none;
@@ -146,7 +181,6 @@ export const CompreAgora = styled.button`
  margin-top: 1.9rem;
  background-color: #09b691;
  border-radius: 10px;
- border: solid 1px #fff;
 
  &:hover {
   background-color: #079778;
@@ -155,7 +189,10 @@ export const CompreAgora = styled.button`
  p {
   text-align: center;
   color: #fff;
+  font-size: 17px;
   margin-top: -0.0063rem;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
  }
 
  img {

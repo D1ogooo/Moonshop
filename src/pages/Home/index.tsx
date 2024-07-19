@@ -2,7 +2,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import coinIcon from '/coinIcon.png'
 import { Header } from '../../Components/Header';
-import { Main, VideoOverlay, VideoBackground, Content, Container, Conteudo, CompreAgora, Buy } from './style';
+import { Main, VideoOverlay, VideoBackground, Content, Container, Conteudo, CompreAgora, Buy, ContainerTitle } from './style';
 import { Planos, CardPai, Card } from './style';
 import video from '/VideoPvP.mp4';
 import MoonIcon from '/Moonshop icon.png'
@@ -39,14 +39,19 @@ function Home () {
        <CardPai>
         <Card>
           <Container>
+          <ContainerTitle>
+          <p className='precoProduto'>
+            R$39,99 / life
+          </p>
           <h1>💫 Stars</h1>
+          </ContainerTitle>
           <hr />
           <p className='sobreOcurso'>Nosso pacote mais básico oferece ensinamentos essenciais para sua screenshare ser mais eficaz, um curso introdutório para
             aqueles que desejam entender um pouco do assunto porem não com tanta profundidade
-            (<span style={{ backgroundColor: '#F9C23C', color: '#fff'}}>@[ST] Stars</span>)
+            (<span style={{ backgroundColor: '#F9C23C', color: '#fff'}}>Stars</span>)
           </p>
          <Conteudo style={{ marginTop: '2.9rem'}}>
-          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (@[ST] Stars)</p>
+          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{color: '#F9C23C'}}>Stars</span>)</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Conteúdos básicos</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Aulas essenciais de detecção (5)</p>
          </Conteudo>
@@ -54,51 +59,57 @@ function Home () {
          <hr style={{ marginTop: '1.75rem'}}/>
          <Container>
          <div style={{display: 'flex', alignItems: 'center', gap: '20px'}}>
-          <p className='precoProduto'>
-            R$39,99 / life
-          </p>
          <CompreAgora>
-          <p>Compre agora</p>
+          <p>Compre agora {'>'}</p>
          </CompreAgora>
+         <a href='#' className='faleConosco'>Fale conosco</a>
          </div>
          </Container>
         </Card>
         <Card>
          <Container>
-          <h1>🌒Eclipse</h1>
+         <ContainerTitle>
+          <p className='precoProduto'>
+            R$39,99 / life
+          </p>
+          <h1>🌒 Eclipse</h1>
+          </ContainerTitle>
           <hr />
           <p className='sobreOcurso'>Nosso pacote mediano, proporciona ao cliente métodos e maneiras importantes e eficazes de detecção para sua screeenshare Pacote de SS 
-           (<span style={{ backgroundColor: '#da43d4d0', color: '#fff', fontWeight: '200' }}>@[EC] Eclipse</span>) Conteúdos medianos.
-           Aulas intermediárias de detecção (9).
+           (<span style={{ backgroundColor: '#da43d4d0', color: '#fff', fontWeight: '200' }}>Eclipse</span>) Conteúdos medianos para quem buscar um conhecimento a mas.
+           
           </p>
          <Conteudo>
-          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (@[EC] Eclipse)</p>
+          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{color: '#da43d4d0'}}>Eclipse</span>)</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Conteúdos medianos</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Aulas intermediárias de detecção (9)</p>
          </Conteudo>
          </Container>
          <hr style={{ marginTop: '2.5rem'}}/>
-         <Container>
+        <Container>
          <div style={{display: 'flex', alignItems: 'center', gap: '20px'}}>
-          <p className='precoProduto'>
-           R$99,99 / life
-          </p>
          <CompreAgora>
-          <p>Compre agora</p>
+          <p>Compre agora {">"}</p>
          </CompreAgora>
+         <a href='#' className='faleConosco'>Fale conosco</a>
          </div>
-         </Container>
+        </Container>
         </Card>
         <Card>
          <Container>
+         <ContainerTitle>
+          <p className='precoProduto'>
+            R$39,99 / life
+          </p>
           <h1>🌀 Deluxe</h1>
+          </ContainerTitle>
           <hr />
           <p className='sobreOcurso'>Nosso pacote mediano, proporciona ao cliente métodos e maneiras importantes e eficazes de detecção para sua screeenshare Pacote de SS 
-           (<span style={{ backgroundColor: '#1345B7', color: '#fff', fontWeight: '200' }}>@[DE] Deluxe</span>) Conteúdos medianos.
+           (<span style={{ backgroundColor: '#1345B7', color: '#fff', fontWeight: '200' }}>Deluxe</span>) Conteúdos medianos.
            Aulas intermediárias de detecção (9).
           </p>
          <Conteudo>
-          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (@[DE] Deluxe)</p>
+          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{color: '#1345B7'}}>Deluxe</span>)</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Conteúdos avançados</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Aulas avançadas de detecção (9)</p>
          </Conteudo>
@@ -106,12 +117,10 @@ function Home () {
          <hr style={{ marginTop: '2.5rem'}}/>
          <Container>
          <div style={{display: 'flex', alignItems: 'center', gap: '20px'}}>
-          <p className='precoProduto'>
-            R$149,99 / life
-          </p>
          <CompreAgora>
-          <p>Compre agora</p>
+          <p>Compre agora {">"}</p>
          </CompreAgora>
+          <a  href='#' className='faleConosco'>Fale conosco</a>
          </div>
          </Container>
         </Card>
