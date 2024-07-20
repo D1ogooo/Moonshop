@@ -13,7 +13,7 @@ export function Header () {
       </div>
        <ul>
         <li>
-         <a href="#">Home</a>
+         <a href="#">Início</a>
         </li>
         <li>
          <a href="#">Sobre</a>
@@ -22,7 +22,7 @@ export function Header () {
          <a href="#">Fale conosco</a>
         </li>
         <li>
-         <a href="#">Nossa equipe</a>
+         <a href="#">Nossos planos</a>
         </li>
        </ul>
        <Link target='_blank' href='https://discord.gg/3YpDJmrdK3'>

@@ -1,10 +1,11 @@
+import { Header } from '../../Components/Header';
+import { Sobre } from '../../Components/Sobre'
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
-import coinIcon from '/coinIcon.png'
-import { Header } from '../../Components/Header';
-import { Main, VideoOverlay, VideoBackground, Content, Container, Conteudo, CompreAgora, Buy, ContainerTitle } from './style';
+import { Main, VideoOverlay, VideoBackground, Content, Container, Conteudo, CompreAgora, ContainerTitle } from './style';
 import { Planos, CardPai, Card } from './style';
 import video from '/VideoPvP.mp4';
+import coinIcon from '/coinIcon.png'
 import MoonIcon from '/Moonshop icon.png'
 
 function Home () {
@@ -34,6 +35,7 @@ function Home () {
           </p>          
         </Content>
       </Main>
+      <Sobre/>
       <Planos>
        <h2>Que tal começar <br></br><span style={{ color: "#08BA92"}}>estudar</span> conosco hoje mesmo?</h2>
        <CardPai>
@@ -70,14 +72,13 @@ function Home () {
          <Container>
          <ContainerTitle>
           <p className='precoProduto'>
-            R$39,99 / life
+            R$99,99 / life
           </p>
           <h1>🌒 Eclipse</h1>
           </ContainerTitle>
           <hr />
           <p className='sobreOcurso'>Nosso pacote mediano, proporciona ao cliente métodos e maneiras importantes e eficazes de detecção para sua screeenshare Pacote de SS 
-           (<span style={{ backgroundColor: '#da43d4d0', color: '#fff', fontWeight: '200' }}>Eclipse</span>) Conteúdos medianos para quem buscar um conhecimento a mas.
-           
+           (<span style={{ backgroundColor: '#da43d4d0', color: '#fff', fontWeight: '200' }}>Eclipse</span>) Conteúdos medianos para quem buscar um conhecimento a mas
           </p>
          <Conteudo>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{color: '#da43d4d0'}}>Eclipse</span>)</p>
@@ -99,19 +100,18 @@ function Home () {
          <Container>
          <ContainerTitle>
           <p className='precoProduto'>
-            R$39,99 / life
+            R$149,99 / life
           </p>
           <h1>🌀 Deluxe</h1>
           </ContainerTitle>
           <hr />
-          <p className='sobreOcurso'>Nosso pacote mediano, proporciona ao cliente métodos e maneiras importantes e eficazes de detecção para sua screeenshare Pacote de SS 
-           (<span style={{ backgroundColor: '#1345B7', color: '#fff', fontWeight: '200' }}>Deluxe</span>) Conteúdos medianos.
-           Aulas intermediárias de detecção (9).
+          <p className='sobreOcurso'>Nosso pacote
+           (<span style={{ backgroundColor: '#1345B7', color: '#fff', fontWeight: '200' }}>Deluxe</span>) o mais avançado, proporciona ao cliente detectar até as trapaças mais complexas já vistas até o momento, trabalhamos com metodos atualizados e sempre revisamos para proporcionar ao cliente a segurança em sua SS
           </p>
          <Conteudo>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{color: '#1345B7'}}>Deluxe</span>)</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Conteúdos avançados</p>
-          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Aulas avançadas de detecção (9)</p>
+          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Aulas avançadas de detecção (14)</p>
          </Conteudo>
          </Container>
          <hr style={{ marginTop: '2.5rem'}}/>

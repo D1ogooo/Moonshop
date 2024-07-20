@@ -123,7 +123,7 @@ export const CardPai = styled.div`
 `
 
 export const Card = styled.section`
- 
+ box-shadow: 1px 0px 47px -18px rgba(0,0,0,0.33);
  h1 {
   text-align: center;
   /* margin-top: 40px; */
@@ -170,6 +170,7 @@ export const Conteudo = styled.div`
 `
 
 export const CompreAgora = styled.button`
+ box-shadow: 1px 0px 47px -18px rgba(0,0,0,0.33);
  width: 170px;
  height: 50px;
  background: none;
