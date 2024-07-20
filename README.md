@@ -1,4 +1,4 @@
-🌑 Moonshop
+🌑 Moonshop (Frontend)
 
 📋 Sobre o projeto
 
