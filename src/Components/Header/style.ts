@@ -31,15 +31,15 @@ export const HeaderStyle = styled.header`
  }
 
  div:nth-child(1) {
-  border-radius: 40px;
-  height: 60px;
-  width: 60px;
+  border-radius: 2.5rem;
+  height: 3.75rem;
+  width: 3.75rem;
   background-color: #000;
   text-align: center;
-  padding: 5px;
+  padding: .3125rem;
   img {
-   height: 50px;
-   width: 50px;
+   height: 3.125rem;
+   width: 3.125rem;
   }
  }
 `
@@ -48,28 +48,35 @@ export const Link = styled.a`
   display: flex;
   align-items: center;
   gap: .5rem;
-  padding: 14px;
-  width: 145px;
+  padding: .875rem;
+  width: 9.0625rem;
   cursor: pointer;
-  height: 50px;
-  border: solid 1px #C4C4C5;
-  border-radius: 50px;
+  height: 3.125rem;
+  border-radius: 3.125rem;
   margin-top: -.625rem;
-  background: #01234F;
+  background: #08BA92;
   font-family: "Nunito Sans", sans-serif;
   font-size: .9rem;
-  color: #C4C4C5;
+  color: #fff;
   font-weight: 400;
   text-decoration: none;
 
   img {
-   width: 30px;
-   height: 30px;
+   width: 1.875rem;
+   height: 1.875rem;
   }
  
  &:hover {
-  background: #015681;
+  background: #15d2a9;
   transition: 0.5s all;
+  p {
+   transition: 500ms all;
+   display: none;
+  }
+
+  img {
+   margin: 0 auto;
+  }
  }
 `
 

@@ -7,6 +7,8 @@ import { Planos, CardPai, Card } from './style';
 import video from '/VideoPvP.mp4';
 import coinIcon from '/coinIcon.png'
 import MoonIcon from '/Moonshop icon.png'
+import { Footer } from '../../Components/Footer';
+import { FaleConosco } from '../../Components/FaleConosco';
 
 function Home () {
   const [text]  = useTypewriter({
@@ -126,6 +128,8 @@ function Home () {
         </Card>
        </CardPai>
       </Planos>
+      <FaleConosco />
+     <Footer/>
     </>
   );
 }

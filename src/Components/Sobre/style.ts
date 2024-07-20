@@ -53,13 +53,17 @@ export const Right = styled.div`
   margin: 0 auto;
   width: 50%;
   margin-bottom: 1rem;
+  border: none;
+  height: 1px;
+  background: #272727;
  }
 
  h1 {
   margin-top: -2.5rem;
   text-align: center;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #fff;
+  font-size: 1.1875rem;
   margin-bottom: .2rem;
  }
 
@@ -69,7 +73,7 @@ export const Right = styled.div`
   height: auto;
   font-family: "Space Grotesk", sans-serif;
   color: #959597;
-  font-size: .9375rem;
+  font-size: .8562rem;
  }
 `
 

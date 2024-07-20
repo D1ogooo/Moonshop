@@ -1,4 +1,5 @@
-import { External, HeaderStyle, HR, Link } from './style'
+import { External, HeaderStyle, HR } from './style'
+import { Link } from '../LinkDiscord/index'
 import luaIcon from '/lua normal.png'
 import discordIcon from '/discordIcon.svg'
 import MoonIcon from '/Moonshop icon.png'
@@ -19,18 +20,15 @@ export function Header () {
          <a href="#">Sobre</a>
         </li>
         <li>
-         <a href="#">Fale conosco</a>
-        </li>
-        <li>
          <a href="#">Nossos planos</a>
         </li>
+        <li>
+         <a href="#">Fale conosco</a>
+        </li>
        </ul>
-       <Link target='_blank' href='https://discord.gg/3YpDJmrdK3'>
-        <img src={discordIcon} alt="" />
-        Comunidade
-       </Link>
-     </HeaderStyle>
-    </External>
+       <Link Text={"Comunidade"}/>
+      </HeaderStyle>
+     </External>
     <HR />
    </>
   )
