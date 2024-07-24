@@ -17,13 +17,13 @@ export function Header () {
          <a href="#">Início</a>
         </li>
         <li>
-         <a href="#">Sobre</a>
+         <a href="#TitleSobre">Sobre</a>
         </li>
         <li>
-         <a href="#">Nossos planos</a>
+         <a href="#TitlePlanos">Nossos planos</a>
         </li>
         <li>
-         <a href="#">Fale conosco</a>
+         <a href="#TitleFaleConosco">Fale conosco</a>
         </li>
        </ul>
        <Link Text={"Comunidade"}/>

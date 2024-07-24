@@ -5,15 +5,13 @@ import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { Main, VideoOverlay, VideoBackground, Content, Container, Conteudo, CompreAgora, ContainerTitle } from './style';
 import { Planos, CardPai, Card } from './style';
 import video from '/VideoPvP.mp4';
-import coinIcon from '/coinIcon.png'
-import MoonIcon from '/Moonshop icon.png'
 import { Footer } from '../../Components/Footer';
 import { FaleConosco } from '../../Components/FaleConosco';
 
 function Home () {
   const [text]  = useTypewriter({
     words: ['Olá player', 'Somos a Moonshop screenshare', 'Conheça nossos planos'],
-    loop: {},
+    loop: 5,
     typeSpeed: 120,
     deleteSpeed: 80,
   });
@@ -39,7 +37,7 @@ function Home () {
       </Main>
       <Sobre/>
       <Planos>
-       <h2>Que tal começar <br></br><span style={{ color: "#08BA92"}}>estudar</span> conosco hoje mesmo?</h2>
+       <h2 id="TitlePlanos">Que tal começar <br></br><span style={{ color: "#08BA92"}}>estudar</span> conosco hoje mesmo?</h2>
        <CardPai>
         <Card>
           <Container>

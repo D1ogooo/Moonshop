@@ -98,10 +98,10 @@ export const Planos = styled.div`
   margin-bottom: 4rem;
   h2 {
    text-align: center;
-   margin-top: 4rem;
-   margin-bottom: 4rem;
+   margin-top: 5rem;
+   margin-bottom: 2rem;
    font-size: 2.5rem;
-   font-family: "Open Sans", sans-serif;
+   font-family: "Baloo 2";
    font-weight: 600;
    color: #fff;
   }

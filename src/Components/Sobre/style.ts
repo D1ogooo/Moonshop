@@ -21,13 +21,14 @@ export const Content = styled.section`
  border-radius: .625rem;
  box-shadow: .0625rem 0rem 2.9375rem -1.125rem rgba(0,0,0,0.2);
 
- .Title {
+ #TitleSobre {
   text-align: center;
   margin-top: .5rem;
   margin-bottom: .5rem;
   font-family: "Baloo 2";
-  font-size: 28px;
+  font-size: 2.5rem;
   color: #fff;
+  font-weight: 600;
   span {
    color: #08BA92;
   }

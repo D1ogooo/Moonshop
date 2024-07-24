@@ -5,7 +5,7 @@ function FaleConosco () {
   return (
    <>
     <FaleConoscoStyle>
-      <h1>Entre em contato conosco para mais informações</h1>
+      <h1 id='TitleFaleConosco'>Entre em contato conosco para mais informações</h1>
      <Container>
       <Link Text={"Suporte"}/>
      </Container>
