@@ -14,12 +14,15 @@ export const FooterStyle = styled.div`
 export const Container = styled.div`
  width: 90%;
  display: flex;
- justify-content: center;
+ justify-content: space-between;
  align-items: center;
  
  p {
   font-family: "Space Grotesk", sans-serif;
   color: #4a4a4a;
+  a {
+   color: #B63BB1;
+  }
  }
 `
 
