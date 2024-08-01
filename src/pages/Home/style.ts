@@ -118,6 +118,7 @@ export const CardPai = styled.div`
  display: flex;
  flex-wrap: wrap;
  gap: 3.125rem;
+ justify-content: center;
 `
 
 export const Card = styled.section`

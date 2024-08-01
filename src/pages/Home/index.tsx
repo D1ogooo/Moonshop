@@ -37,7 +37,7 @@ function Home () {
       </Main>
       <Sobre/>
       <Planos>
-       <h2 id="TitlePlanos">Que tal começar <br></br><span style={{ color: "#08BA92"}}>estudar</span> conosco hoje mesmo?</h2>
+       <h2 id="TitlePlanos">Que tal começar <br></br><span style={{ color: "#08BA92" }}>estudar</span> conosco hoje mesmo?</h2>
        <CardPai>
         <Card>
           <Container>
@@ -50,17 +50,17 @@ function Home () {
           <hr />
           <p className='sobreOcurso'>Nosso pacote mais básico oferece ensinamentos essenciais para sua screenshare ser mais eficaz, um curso introdutório para
             aqueles que desejam entender um pouco do assunto porem não com tanta profundidade
-            (<span style={{ backgroundColor: '#F9C23C', color: '#fff'}}>Stars</span>)
+            (<span style={{ backgroundColor: '#F9C23C', color: '#fff' }}>Stars</span>)
           </p>
          <Conteudo style={{ marginTop: '2.9rem'}}>
-          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{color: '#F9C23C'}}>Stars</span>)</p>
+          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{ color: '#F9C23C' }}>Stars</span>)</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Conteúdos básicos</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Aulas essenciais de detecção (5)</p>
          </Conteudo>
          </Container>
-         <hr style={{ marginTop: '1.75rem'}}/>
+         <hr style={{ marginTop: '1.75rem' }}/>
          <Container>
-         <div style={{display: 'flex', alignItems: 'center', gap: '20px'}}>
+         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
          <CompreAgora>
           <p>Compre agora {'>'}</p>
          </CompreAgora>
@@ -81,14 +81,14 @@ function Home () {
            (<span style={{ backgroundColor: '#da43d4d0', color: '#fff', fontWeight: '200' }}>Eclipse</span>) Conteúdos medianos para quem buscar um conhecimento a mas
           </p>
          <Conteudo>
-          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{color: '#da43d4d0'}}>Eclipse</span>)</p>
+          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{ color: '#da43d4d0' }}>Eclipse</span>)</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Conteúdos medianos</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Aulas intermediárias de detecção (9)</p>
          </Conteudo>
          </Container>
          <hr style={{ marginTop: '2.5rem'}}/>
         <Container>
-         <div style={{display: 'flex', alignItems: 'center', gap: '20px'}}>
+         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
          <CompreAgora>
           <p>Compre agora {">"}</p>
          </CompreAgora>
@@ -116,7 +116,7 @@ function Home () {
          </Container>
          <hr style={{ marginTop: '2.5rem'}}/>
          <Container>
-         <div style={{display: 'flex', alignItems: 'center', gap: '20px'}}>
+         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
          <CompreAgora>
           <p>Compre agora {">"}</p>
          </CompreAgora>

@@ -6,7 +6,7 @@ export function HeaderMobille() {
   return (
    <>
     <External>
-     <HeaderStyle>
+     {/* <HeaderStyle>
       <div>
        <img src={MoonIcon}/>
       </div>
@@ -25,7 +25,7 @@ export function HeaderMobille() {
         </li>
        </ul>
        <Link Text={"Comunidade"} style={{ zindex: '2'}}/>
-      </HeaderStyle>
+      </HeaderStyle> */}
      </External>
     <HR />
    </>

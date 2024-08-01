@@ -22,7 +22,8 @@ export const HeaderStyle = styled.header`
     right: 0;
     z-index: 2;
     height: 100%;
-    background-color: #009581;
+    /* background-color: #009581; */
+    /* width: 90%; */
     margin-top: -1rem;
     /* padding-top: 180px; */
     align-items: center;

@@ -1,94 +1,94 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
- width: 90%;
- margin: 0 auto;
-`
+  width: 90%;
+  margin: 0 auto;
+`;
 
 export const SobreStyle = styled.div`
- margin-top: 5rem;
- width: 100%;
- height: 37.5rem;
- background-color: #151718;
-`
+  margin-top: 5rem;
+  width: 100%;
+  min-height: 37.5rem;
+  background-color: #151718;
+  display: flex;
+  justify-content: center;
+`;
 
 export const Content = styled.section`
- width: 100%;
- margin: 0 auto;
- width: 90%;
- height: 35.25rem;
- border: solid .0625rem #272727;
- border-radius: .625rem;
- box-shadow: .0625rem 0rem 2.9375rem -1.125rem rgba(0,0,0,0.2);
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: solid 0.0625rem #272727;
+  border-radius: 0.625rem;
+  box-shadow: 0.0625rem 0rem 2.9375rem -1.125rem rgba(0, 0, 0, 0.2);
+`;
 
- #TitleSobre {
+export const Left = styled.div`
+  width: 30%;
+  border-radius: 20px;
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border-radius: 10%;
+  }
+`;
+
+export const Right = styled.div`
+  width: 70%;
+  padding: 0 20px;
+
+  h1 {
+   text-align: center;
+   font-family: "Baloo 2";
+   font-size: 1.3rem;
+   color: #fff;
+   font-weight: 600;
+  }
+`;
+
+export const Conteudo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: solid 0.0625rem #272727;
+  border-radius: 0.625rem;
+  box-shadow: 0.0625rem 0rem 2.9375rem -1.125rem rgba(0, 0, 0, 0.2);
+`;
+
+export const TitleSobre = styled.h1`
   text-align: center;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-family: "Baloo 2";
   font-size: 2.5rem;
   color: #fff;
   font-weight: 600;
   span {
-   color: #08BA92;
+    color: #08ba92;
   }
- }
-`
+`;
 
-export const Left = styled.div`
- width: 30%;
- border-radius: 20px;
- img {
-  width: 250px;
-  height: 250px;
-  background-color: #000;
-  border-radius: 10%;
- }
-`
+export const Paragraph = styled.p`
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  color: #959597;
+  font-size: 0.8562rem;
+  max-width: 100%;
+`;
 
-export const Right = styled.div`
- width: 50%;
- height: auto;
-
- hr {
+export const HR = styled.hr`
   margin: 0 auto;
   width: 50%;
   margin-bottom: 1rem;
   border: none;
   height: 1px;
   background: #272727;
- }
-
- h1 {
-  margin-top: -2.5rem;
-  text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #fff;
-  font-size: 1.1875rem;
-  margin-bottom: .2rem;
- }
-
- p {
-  text-align: center;
-  width: 100%;
-  height: auto;
-  font-family: "Space Grotesk", sans-serif;
-  color: #959597;
-  font-size: .8562rem;
- }
-`
-
-export const Conteudo =  styled.div`
- width: 100%;
- display: flex;
- justify-content: center;
- align-items: center;
- 
- margin: 0 auto;
- width: 90%;
- height: 35.25rem;
- border: solid .0625rem #272727;
- border-radius: .625rem;
- box-shadow: .0625rem 0rem 2.9375rem -1.125rem rgba(0,0,0,0.2);
-
-`
+`;

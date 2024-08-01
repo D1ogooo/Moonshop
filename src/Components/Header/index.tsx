@@ -12,5 +12,5 @@ export function Header () {
     window.addEventListener('resize', handleResize);
    },[])
 
-  return ( <> { state > 1000 ? <HeaderDesktop /> : <HeaderMobille /> } </>)
+  return ( <> { state > 1100 ? <HeaderDesktop /> : <HeaderMobille /> } </>)
 }

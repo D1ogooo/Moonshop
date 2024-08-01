@@ -9,15 +9,27 @@ export const Container = styled.div`
  
  `
 
+// width: 100%;
+// height: 3.25rem;
+// border: solid 1px #272727;
+// text-align: center;
+
+// display: flex;
+// justify-content: center;
+// align-items: center;
+
 export const FaleConoscoStyle = styled.section`
+width: 100%;
 display: flex;
 justify-content: center;
 flex-direction: column;
- h1 {
-  text-align: center;
+text-align: center;
+h1 {
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
-  text-align: right;
+
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.2rem;
   font-style: normal;
