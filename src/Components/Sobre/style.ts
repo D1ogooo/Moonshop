@@ -17,8 +17,8 @@ export const SobreStyle = styled.div`
 export const Content = styled.section`
   width: 90%;
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 20px;
+  max-width: 75rem;
+  padding: 1.25rem;
   box-sizing: border-box;
   border: solid 0.0625rem #272727;
   border-radius: 0.625rem;
@@ -27,18 +27,18 @@ export const Content = styled.section`
 
 export const Left = styled.div`
   width: 30%;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   img {
     width: 100%;
     height: auto;
-    max-width: 250px;
+    max-width: 15.625rem;
     border-radius: 10%;
   }
 `;
 
 export const Right = styled.div`
   width: 70%;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 
   h1 {
    text-align: center;
@@ -46,6 +46,13 @@ export const Right = styled.div`
    font-size: 1.3rem;
    color: #fff;
    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+    max-height: 20rem; 
+    overflow-y: auto;
   }
 `;
 
@@ -55,12 +62,16 @@ export const Conteudo = styled.div`
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 20px;
+  max-width: 75rem;
+  padding: 1.25rem;
   box-sizing: border-box;
   border: solid 0.0625rem #272727;
   border-radius: 0.625rem;
   box-shadow: 0.0625rem 0rem 2.9375rem -1.125rem rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const TitleSobre = styled.h1`

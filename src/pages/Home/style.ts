@@ -149,7 +149,7 @@ export const Card = styled.section`
  .sobreOcurso {
   text-align: center;
   width: 100%;
-  height: auto;
+  height: 5rem;
   margin-top: .9rem;
   font-family: "Space Grotesk", sans-serif;
   color: #C4C4C5;

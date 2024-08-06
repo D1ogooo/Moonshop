@@ -60,7 +60,7 @@ function Home () {
          </Container>
          <hr style={{ marginTop: '1.75rem' }}/>
          <Container>
-         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+         <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
          <CompreAgora>
           <p>Compre agora {'>'}</p>
          </CompreAgora>
@@ -88,7 +88,7 @@ function Home () {
          </Container>
          <hr style={{ marginTop: '2.5rem'}}/>
         <Container>
-         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+         <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
          <CompreAgora>
           <p>Compre agora {">"}</p>
          </CompreAgora>
@@ -96,33 +96,35 @@ function Home () {
          </div>
         </Container>
         </Card>
+
         <Card>
          <Container>
          <ContainerTitle>
           <p className='precoProduto'>
-            R$149,99 / life
+           R$149,99 / life
           </p>
           <h1>🌀 Deluxe</h1>
           </ContainerTitle>
           <hr />
-          <p className='sobreOcurso'>Nosso pacote
-           (<span style={{ backgroundColor: '#1345B7', color: '#fff', fontWeight: '200' }}>Deluxe</span>) o mais avançado, proporciona ao cliente detectar até as trapaças mais complexas já vistas até o momento, trabalhamos com metodos atualizados e sempre revisamos para proporcionar ao cliente a segurança em sua SS
+          <p className='sobreOcurso'> 
+           o mais avançado, proporciona ao cliente detectar até as trapaças mais complexas já vistas até o momento, trabalhamos com metodos atualizados e sempre revisamos para proporcionar ao cliente a segurança em sua SS
+           (<span style={{ backgroundColor: '#1345B7', color: '#fff' }}>Stars</span>)
           </p>
          <Conteudo>
-          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{color: '#1345B7'}}>Deluxe</span>)</p>
+          <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Pacote de SS (<span style={{ color: '#1345B7' }}>Deluxe</span>)</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Conteúdos avançados</p>
           <p><IoCheckmarkDoneSharp color="#a543e6d0" size={20}/> Aulas avançadas de detecção (14)</p>
          </Conteudo>
          </Container>
          <hr style={{ marginTop: '2.5rem'}}/>
-         <Container>
-         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+        <Container>
+         <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
          <CompreAgora>
           <p>Compre agora {">"}</p>
          </CompreAgora>
-          <a  href='#' className='faleConosco'>Fale conosco</a>
+         <a href='#' className='faleConosco'>Fale conosco</a>
          </div>
-         </Container>
+        </Container>
         </Card>
        </CardPai>
       </Planos>
