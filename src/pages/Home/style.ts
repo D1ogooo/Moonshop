@@ -6,7 +6,7 @@ export const Main = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  /* position: relative; */
 `;
 
 export const VideoOverlay = styled.div`

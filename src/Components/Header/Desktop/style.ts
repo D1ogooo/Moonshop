@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const External = styled.div`
+height: 3.5rem;
 `
 export const HeaderStyle = styled.header`
  width: 90%;

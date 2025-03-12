@@ -1,33 +1,16 @@
-import { External, HeaderStyle, HR } from './style'
-import { Link } from '../LinkDiscord/index'
-import MoonIcon from '/Moonshop icon.png'
+import { useState, useEffect } from 'react'
+import { HeaderDesktop } from './Desktop/index';
+import { HeaderMobille } from './Mobille/index'
 
-export function Header () {
-  return (
-   <>
-    <External>
-     <HeaderStyle>
-      <div className='logoIcon'>
-       <img src={MoonIcon}/>
-      </div>
-       <ul>
-        <li>
-         <a href="#">Início</a>
-        </li>
-        <li>
-         <a href="#TitleSobre">Sobre</a>
-        </li>
-        <li>
-         <a href="#TitlePlanos">Nossos planos</a>
-        </li>
-        <li>
-         <a href="#TitleFaleConosco">Fale conosco</a>
-        </li>
-       </ul>
-       <Link Text={"Comunidade"}/>
-      </HeaderStyle>
-     </External>
-    <HR />
-   </>
-  )
+export function Header() {
+  const [state, setState] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setState(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize);
+  }, [])
+
+  return (<> {state > 1000 ? <HeaderDesktop /> : <HeaderMobille />} </>)
 }
