@@ -29,6 +29,25 @@ export const HeaderStyle = styled.header`
   align-items: center;
   padding-top: 20vh;
   box-shadow: -1px 10px 50px -9px rgba(0,0,0,0.32);
+  li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin: 10px;
+    font-size: 1.5rem;
+    a {
+      justify-content: center;
+      font-weight: 600;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-decoration: none;
+      color: #000;
+      &:hover {
+        color: #fff;
+        transition: 5ms all;
+      }
+    }
+  }
 }
 
 .menu_icon {
