@@ -1,11 +1,8 @@
 import { useState } from "react";
-import { Link } from "../../LinkDiscord";
 import { External, HeaderStyle, HR } from "./style";
 import { BiMenuAltRight } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 import MoonIcon from '/public/Moonshop icon.png'
-import HambClose from '/public/menu fechado - bootstrap.svg';
-import HambNormal from '/public/menu aberto - bootstrap.svg';
 
 export function HeaderMobille() {
   const [menu, setMenu] = useState(false);
