@@ -1,3 +1,4 @@
+
 import { Header } from '../../Components/Header';
 import { Sobre } from '../../Components/Sobre'
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
@@ -7,6 +8,9 @@ import { Planos, CardPai, Card } from './style';
 import video from '/VideoPvP.mp4';
 import { Footer } from '../../Components/Footer';
 import { FaleConosco } from '../../Components/FaleConosco';
+import { api } from '../../api/http';
+import { Button } from '@/Components/ui/button';
+import { useToast } from '@/hooks/use-toast';
 
 function Home() {
   const [text] = useTypewriter({
@@ -15,6 +19,18 @@ function Home() {
     typeSpeed: 120,
     deleteSpeed: 80,
   });
+
+  const { toast } = useToast()
+
+  function BuyProduct(NameProduct:string) {
+    api.post(`/payments/buy/${NameProduct}`)
+    .then((e) => {
+      // window.href = `${}`
+    })
+    // .catch((e) => {
+    //   alert(e)
+    // })
+  }
 
   return (
     <>
@@ -61,13 +77,14 @@ function Home() {
             <hr style={{ marginTop: '1.75rem' }} />
             <Container>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-                <CompreAgora>
+                <CompreAgora onClick={() => BuyProduct('product_stars')}>
                   <p>Compre agora {'>'}</p>
                 </CompreAgora>
                 <a href='#' className='faleConosco'>Fale conosco</a>
               </div>
             </Container>
           </Card>
+
           <Card>
             <Container>
               <ContainerTitle>
@@ -89,7 +106,7 @@ function Home() {
             <hr style={{ marginTop: '2.5rem' }} />
             <Container>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-                <CompreAgora>
+                <CompreAgora onClick={() => BuyProduct('product_eclipse')}>
                   <p>Compre agora {">"}</p>
                 </CompreAgora>
                 <a href='#' className='faleConosco'>Fale conosco</a>
@@ -119,13 +136,27 @@ function Home() {
             <hr style={{ marginTop: '2.5rem' }} />
             <Container>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-                <CompreAgora>
+                <CompreAgora onClick={() => BuyProduct('product_deluxe')}>
                   <p>Compre agora {">"}</p>
                 </CompreAgora>
                 <a href='#' className='faleConosco'>Fale conosco</a>
               </div>
             </Container>
           </Card>
+
+
+
+<Button
+      variant="outline"
+      onClick={() => {
+        toast({
+          description: "Your message has been sent.",
+        })
+      }}
+    >
+      Show Toast
+    </Button>
+
         </CardPai>
       </Planos>
       <FaleConosco />

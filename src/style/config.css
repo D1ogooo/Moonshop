@@ -1,42 +1,9 @@
-import { createGlobalStyle } from "styled-components";
-
-export const GlobalStyle = createGlobalStyle`
 @import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
- ::-webkit-scrollbar {
-  width: 6.5px;
-  transition: 0.3s all;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #2c2c31;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #08BA92;
-  border-radius: 10px;
-}
- 
- html {
-  scroll-behavior: smooth;
- }
-
- * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
- }
-
- body {
-  background: #151718;
- }
-
- @layer base {
+@layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -98,4 +65,3 @@ export const GlobalStyle = createGlobalStyle`
     @apply bg-background text-foreground;
   }
 }
-`
