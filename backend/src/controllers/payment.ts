@@ -1,18 +1,22 @@
 import type { Request, Response } from "express";
-import type { SignInType, SignUpType } from "../@types/type";
+import axios from "axios";
+import { CreatePaymentRequestType } from "../@types/type";
 import { HttpException } from "../errors/HttpException";
-import { AuthService } from "../services/UsersService";
+import { PaymentService } from "../services/paymentService";
 
 export async function HandleCreatePayment(
-	req: Request<SignInType>,
+	req: Request<{}, {}, CreatePaymentRequestType>,
 	res: Response,
-): Promise<Response | any> {
+): Promise<Response> {
 	try {
-		const service = new AuthService(req.body);
-		const { user, token } = await service.signin();
+		const service = new PaymentService();
+		const payment = await service.createPayment(
+		 req.body,
+	     axios
+	    );
 		return res
-			.status(200)
-			.json({ message: "Usuário autenticado com sucesso", user, token });
+			.status(201)
+			.json(payment);
 	} catch (error) {
 		if (error instanceof HttpException) {
 			return res.status(error.statusCode).json({ message: error.message });

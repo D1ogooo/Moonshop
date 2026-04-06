@@ -2,10 +2,10 @@ import express from "express";
 
 const router = express.Router();
 
-import { authRoutes } from "./AuthRoutes";
+import { paymentRoutes } from "./paymentRoute";
 
 // Routes - Auth
-router.use("/payment", authRoutes)
+router.use("/payment", paymentRoutes)
 
 
 export { router };

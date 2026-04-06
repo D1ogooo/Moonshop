@@ -1,11 +1,11 @@
 import express from "express";
 import {
- HandleDeleteProduct,
+ HandleCreatePayment,
 } from "../controllers/payment";
 
 const paymentRoutes = express.Router();
 
-paymentRoutes.create(
+paymentRoutes.post(
 	"/create",
 	HandleCreatePayment,
 );
