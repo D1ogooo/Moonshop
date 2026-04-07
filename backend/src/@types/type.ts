@@ -1,3 +1,5 @@
+import { AxiosInstance } from "axios";
+
 export interface CreatePaymentResponseType {
   id: string;
   status: string;
@@ -45,4 +47,8 @@ export interface AbacateWebhookType<T = any> {
   devMode: boolean;
   data: T;
 }
+
+export type InjectType = {
+  axios: AxiosInstance;
+};
 
