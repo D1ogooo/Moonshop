@@ -2,8 +2,8 @@ import { AxiosInstance } from "axios";
 
 export interface CreatePaymentResponseType {
   id: string;
-  status: string;
-  amount: number;
+  status?: string;
+  amount?: number;
   pixQrCode?: string;
   paymentUrl?: string;
 }
@@ -60,7 +60,7 @@ interface PaymentType {
   createdAt: Date;
 }
 
-export type InjectType = {
-  Payment: any
-  axios: AxiosInstance;
+export type InjectType<Omit> = {
+  Payment?: any
+  axios?: AxiosInstance;
 };

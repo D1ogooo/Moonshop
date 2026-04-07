@@ -3,15 +3,15 @@ import { Model } from "mongoose";
 import type { CreatePaymentRequestType, InjectType } from "../@types/type";
 
 export class PaymentService {
-  private amount: number;
-  private description: string;
-  private document: string | undefined;
-  private email: string;
-  private name: string;
-  private axios: AxiosInstance;
-  private Payment: Model<any>;
+  private amount?: number;
+  private description?: string;
+  private document?: string | undefined;
+  private email?: string;
+  private name?: string;
+  private axios?: AxiosInstance;
+  private Payment?: Model<any>;
 
-  constructor(body: CreatePaymentRequestType, inject: InjectType) {
+  constructor(body: CreatePaymentRequestType, inject: InjectType<any>) {
     this.amount = body.amount;
     this.description = body.description
     this.document = body.customer.document
@@ -23,7 +23,7 @@ export class PaymentService {
 
 async createPayment() {
   try {
-    const res = await this.axios.post("/payment/create", {
+    const res = await this.axios?.post("/payment/create", {
       amount: this.amount,
       description: this.description,
       customer: {
@@ -33,16 +33,16 @@ async createPayment() {
       },
     });
 
-    await this.Payment.create({
+    await this.Payment?.create({
       data: {
         amount: this.amount,
         description: this.description,
         status: "pending",
-        externalId: res.data.id,
+        externalId: res?.data.id,
       },
     });
 
-    return res.data;
+    return res?.data;
   } catch (error) {
     throw error;
   }
@@ -50,5 +50,9 @@ async createPayment() {
 
   async showPayment() {
    
+  }
+
+  async showSpecificPayment() {
+    
   }
 }
