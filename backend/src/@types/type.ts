@@ -48,7 +48,19 @@ export interface AbacateWebhookType<T = any> {
   data: T;
 }
 
+interface PaymentType {
+  amount: number;
+  description: string;
+  customer: {
+    id: string;
+    email: string;
+    name: string;
+  };
+  updatedAt?: Date;
+  createdAt: Date;
+}
+
 export type InjectType = {
+  Payment: any
   axios: AxiosInstance;
 };
-

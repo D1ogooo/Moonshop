@@ -1,13 +1,11 @@
 import express from "express";
-import {
- HandleShowWebHook,
-} from "../controllers/webhook";
+import { paymentWebhook } from "../webhooks/paymentWebhook";
 
 const webHookRoutes = express.Router();
 
 webHookRoutes.post(
-    "/show",
-    HandleShowWebHook,
+    "/payment",
+    paymentWebhook,
 );
 
 export { webHookRoutes }
