@@ -71,7 +71,7 @@ const payload = {
 ```
 ------------------------------------------------------------------------
 
-## ❤ Retorno da requisição de criação de pagamento
+## ❤ Retorno da requisição de criação de pagamento (sucesso)
 ```js
 {
 	"success": true,
