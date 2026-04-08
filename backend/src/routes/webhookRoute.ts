@@ -3,8 +3,8 @@ import { paymentWebhook } from "../webhooks/paymentWebhook";
 
 const webHookRoutes = express.Router();
 
-webHookRoutes.post(
-    "/payment",
+webHookRoutes.get(
+    "/payment/verify",
     paymentWebhook,
 );
 
