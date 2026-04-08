@@ -27,33 +27,9 @@ PORT=3333
 
 ------------------------------------------------------------------------
 
-## 📌 Endpoint
-
-- `POST /payment/create`
-
-------------------------------------------------------------------------
-
-## 📦 Body da requisição
-
-```json
-{
-  "amount": 1000,
-  "description": "Compra de produto X",
-  "methods": ["PIX"],
-  "frequency": "ONE_TIME",
-  "customer": {
-    "name": "João Silva",
-    "email": "joao@email.com",
-    "document": "11144477735"
-  }
-}
-```
-
-------------------------------------------------------------------------
-
 ## ⚠️ Regras importantes
 
-- `document` vira `taxId`
+- `document` vira `taxId` (seu cpf)
 - CPF precisa ser válido
 - `cellphone` é obrigatório
 - `methods` deve ser array de strings
@@ -61,7 +37,13 @@ PORT=3333
 
 ------------------------------------------------------------------------
 
-## ✅ Payload final
+## 📌 Endpoint
+
+- `POST /payment/create`
+
+------------------------------------------------------------------------
+
+## 📦 Body da requisição
 
 ```js
 const payload = {
@@ -86,6 +68,54 @@ const payload = {
     cellphone: "27988888273",
   },
 };
+```
+------------------------------------------------------------------------
+
+## ❤ Retorno da requisição de criação de pagamento
+```js
+{
+	"success": true,
+	"data": {
+		"products": [
+			{
+				"id": "xxxxxxxxxx",
+				"externalId": "xxxxxxxxxxxx",
+				"quantity": 1
+			}
+		],
+		"amount": 1000,
+		"paidAmount": 0,
+		"status": "PENDING",
+		"devMode": true,
+		"methods": [
+			"PIX"
+		],
+		"frequency": "xxxxxx", 
+		"allowCoupons": false,
+		"coupons": [],
+		"couponsUsed": [],
+		"metadata": {
+			"fee": 80,
+			"returnUrl": "https://seusite.com/retorno",
+			"completionUrl": "https://seusite.com/retorno"
+		},
+		"createdAt": "xxxxxxxxxxxxxxxxxxxxxxxx",
+		"updatedAt": "xxxxxxxxxxxxxxxxxxxxxxxx",
+		"id": "bill_baeAxxxxxxxxxxxxxxxxx",
+		"url": "https://app.abacatepay.com/pay/xxxxxxxxxxxxxxxx",
+		"customer": {
+			"id": "cust_umxxxxxxxxxxxxxxxxxxxxx",
+			"metadata": {
+				"name": "João Silva",
+				"cellphone": "27988888273",
+				"taxId": "11144477735",
+				"email": "joao@email.com",
+				"zipCode": ""
+			}
+		}
+	},
+	"error": null
+}
 ```
 
 ------------------------------------------------------------------------
