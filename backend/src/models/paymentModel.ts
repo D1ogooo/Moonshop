@@ -14,6 +14,18 @@ const PaymentSchema = new mongoose.Schema({
     email: String,
     document: String,
   },
+  frequency: {
+    type: String,
+    enum: ["ONE_TIME", "MULTIPLE_PAYMENTS", "SUBSCRIPTION"],
+    default: "ONE_TIME",
+    required: true,
+  },
+  methods: {
+    type: String,
+    enum: ["PIX", "CARD"],
+    default: "PIX",
+    required: true,
+  },
   status: {
     type: String,
     enum: ["pending", "paid", "failed"],

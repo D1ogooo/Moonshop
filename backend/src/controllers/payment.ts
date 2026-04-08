@@ -16,6 +16,7 @@ export async function HandleCreatePayment(
 			.status(201)
 			.json(payment);
 	} catch (error) {
+		console.log(error)
 		if (error instanceof HttpException) {
 			return res.status(error.statusCode).json({ message: error.message });
 		}

@@ -9,6 +9,8 @@ export interface CreatePaymentResponseType {
 export interface CreatePaymentRequestType {
   amount: number; // em centavos (ex: 10000 = R$100)
   description: string;
+  methods?: "PIX" | "CARD" | undefined;
+  frequency?: "ONE_TIME" | "MULTIPLE_PAYMENTS" | "SUBSCRIPTION" | undefined;
   customer: {
     name: string;
     email: string;
