@@ -9,7 +9,6 @@ export class PaymentService {
   private name?: string;
   private axios: any;
   private Payment?: any;
-  // private methods?: "PIX" | "CARD" | undefined;
   private methods?: any;
 
 
@@ -40,7 +39,7 @@ export class PaymentService {
         {
           amount: this.amount,
           description: this.description,
-          methods: ["PIX"], // garante que é string válida
+          methods: ["PIX"], 
           frequency: "ONE_TIME",
 
           returnUrl: "https://seusite.com/retorno",
@@ -58,7 +57,7 @@ export class PaymentService {
           customer: {
             name: this.name,
             email: this.email,
-            taxId: "11144477735", // 👈 aqui é o segredo
+            taxId: "11144477735",
             cellphone: "27988888273",
           },
         },
