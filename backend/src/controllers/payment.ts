@@ -1,5 +1,5 @@
-import type { Request, Response } from "express";
 import axios from "axios";
+import type { Request, Response } from "express";
 import { CreatePaymentRequestType } from "../@types/type";
 import { HttpException } from "../errors/HttpException";
 import { PaymentService } from "../services/paymentService";

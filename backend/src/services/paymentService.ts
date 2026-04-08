@@ -1,5 +1,3 @@
-import type { AxiosInstance } from "axios";
-import { Model } from "mongoose";
 import type { CreatePaymentRequestType, InjectType } from "../@types/type";
 
 export class PaymentService {
@@ -8,8 +6,8 @@ export class PaymentService {
   private document?: string | undefined;
   private email?: string;
   private name?: string;
-  private axios?: AxiosInstance;
-  private Payment?: Model<any>;
+  private axios: any;
+  private Payment?: any;
 
   constructor(body: CreatePaymentRequestType, inject: InjectType<any>) {
     this.amount = body.amount;

@@ -1,5 +1,3 @@
-import { AxiosInstance } from "axios";
-
 export interface CreatePaymentResponseType {
   id: string;
   status?: string;
@@ -61,6 +59,6 @@ interface PaymentType {
 }
 
 export type InjectType<Omit> = {
-  Payment?: any
-  axios?: AxiosInstance;
+  Payment?: any;
+  axios?: any;
 };
