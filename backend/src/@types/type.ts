@@ -6,14 +6,26 @@ export interface CreatePaymentResponseType {
   paymentUrl?: string;
 }
 
+export interface ProductType {
+  externalId: string;
+  name: string;
+  quantity: number;
+  price: number;
+}
+
 export interface CreatePaymentRequestType {
   amount: number; // em centavos (ex: 10000 = R$100)
   description: string;
   methods?: "PIX" | "CARD" | undefined;
   frequency?: "ONE_TIME" | "MULTIPLE_PAYMENTS" | "SUBSCRIPTION" | undefined;
+  externalId?: string;
+  quantity: number;
+  products?: ProductType[];
+
   customer: {
     name: string;
     email: string;
+    cellphone?: string;
     document?: string;
   };
 }

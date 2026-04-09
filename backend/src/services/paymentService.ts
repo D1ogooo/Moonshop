@@ -1,4 +1,4 @@
-import type { CreatePaymentRequestType, InjectType } from "../@types/type";
+import type { ProductType, CreatePaymentRequestType, InjectType } from "../@types/type";
 
 export class PaymentService {
   private amount?: number;
@@ -10,19 +10,24 @@ export class PaymentService {
   private axios: any;
   private Payment?: any;
   private methods?: any;
+  private cellphone?: string; 
+  private products?: ProductType[];
 
+constructor(body: CreatePaymentRequestType, inject: InjectType<any>) {
+  this.amount = body.amount;
+  this.description = body.description;
+  this.document = body.customer.document;
+  this.frequency = body.frequency;
+  this.methods = body.methods;
+  this.axios = inject.axios;
+  this.Payment = inject.Payment;
 
-  constructor(body: CreatePaymentRequestType, inject: InjectType<any>) {
-    this.amount = body.amount;
-    this.description = body.description
-    this.document = body.customer.document
-    this.frequency = body.frequency
-    this.email = body.customer.email
-    this.name = body.customer.name
-    this.Payment = inject.Payment
-    this.methods = body.methods
-    this.axios = inject.axios
-  }
+  this.name = body.customer.name;
+  this.email = body.customer.email;
+  this.cellphone = body.customer.cellphone;
+
+  this.products = body.products;
+}
 
   async createPayment() {
     try {
@@ -39,26 +44,19 @@ export class PaymentService {
         {
           amount: this.amount,
           description: this.description,
-          methods: ["PIX"], 
-          frequency: "ONE_TIME",
+          methods: this.methods, 
+          frequency: this.frequency,
 
           returnUrl: "https://seusite.com/retorno",
           completionUrl: "https://seusite.com/retorno",
 
-          products: [
-            {
-              externalId: "prod-1",
-              name: this.description,
-              quantity: 1,
-              price: this.amount,
-            },
-          ],
+          products: this.products,
 
           customer: {
             name: this.name,
             email: this.email,
-            taxId: "11144477735",
-            cellphone: "27988888273",
+            taxId: this.document, //cpf ou cnpj (document)
+            cellphone: this.cellphone, //opcional
           },
         },
         {
