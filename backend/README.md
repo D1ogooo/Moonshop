@@ -69,6 +69,30 @@ const payload = {
   },
 };
 ```
+
+``` Como deve ser enviado a requisição
+
+{
+  "amount": 1000,
+  "description": "Compra de produto X",
+  "methods": ["PIX"],
+  "frequency": "ONE_TIME",
+  "products": [
+    {
+      "externalId": "prod-1",
+      "name": "Produto X",
+      "quantity": 1,
+      "price": 1000
+    }
+  ],
+  "customer": {
+    "name": "Jacinto Mendes",
+    "email": "jacinto@email.com",
+    "document": "11144477735",
+    "cellphone": "27999999999"
+  }
+}
+``` 
 ------------------------------------------------------------------------
 
 ## ❤ Retorno da requisição de criação de pagamento (sucesso)
