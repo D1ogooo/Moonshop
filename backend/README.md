@@ -70,7 +70,8 @@ const payload = {
 };
 ```
 
-``` Como deve ser enviado a requisição
+## Como deve ser enviado a requisição HTTP
+```
 
 {
   "amount": 1000,
@@ -86,10 +87,10 @@ const payload = {
     }
   ],
   "customer": {
-    "name": "Jacinto Mendes",
-    "email": "jacinto@email.com",
-    "document": "11144477735",
-    "cellphone": "27999999999"
+    "name": "XXX",
+    "email": "XXX",
+    "document": "XXX",
+    "cellphone": "XXX"
   }
 }
 ``` 
