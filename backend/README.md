@@ -69,6 +69,31 @@ const payload = {
   },
 };
 ```
+
+## Como deve ser enviado a requisição HTTP
+```
+
+{
+  "amount": 1000,
+  "description": "Compra de produto X",
+  "methods": ["PIX"],
+  "frequency": "ONE_TIME",
+  "products": [
+    {
+      "externalId": "prod-1",
+      "name": "Produto X",
+      "quantity": 1,
+      "price": 1000
+    }
+  ],
+  "customer": {
+    "name": "XXX",
+    "email": "XXX",
+    "document": "XXX",
+    "cellphone": "XXX"
+  }
+}
+``` 
 ------------------------------------------------------------------------
 
 ## ❤ Retorno da requisição de criação de pagamento (sucesso)
