@@ -9,7 +9,7 @@ export async function HandleCreateProduct(
 	res: Response,
 ): Promise<Response> {
 	try {
-		const service = new ProductService(req.body, { ProductsRegister });
+		const service = new ProductService(req.body, { ProductsRegister }, { HttpException });
 		const product = await service.createProduct();
 		return res
 			.status(201)

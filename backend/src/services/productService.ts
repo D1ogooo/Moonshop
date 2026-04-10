@@ -1,11 +1,10 @@
 import { CreateProductType } from "../@types/type";
-import { HttpException } from "../errors/HttpException";
 
 export class ProductService {
   constructor(
     private productData: CreateProductType,
     private models: { ProductsRegister: any }, 
-    private errors: { HttpException: typeof HttpException },
+    private errors: { HttpException: any },
   ) {}
 
   async createProduct() {
