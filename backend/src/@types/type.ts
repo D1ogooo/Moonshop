@@ -6,6 +6,13 @@ export interface CreatePaymentResponseType {
   paymentUrl?: string;
 }
 
+export interface CreateProductType {
+  image?: string;
+  name: string;
+  amount: number;
+  description: string;
+}
+
 export interface ProductType {
   externalId: string;
   name: string;

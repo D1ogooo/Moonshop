@@ -13,6 +13,7 @@ const PaymentSchema = new mongoose.Schema({
     name: String,
     email: String,
     document: String,
+    cellphone: String,
   },
   frequency: {
     type: String,

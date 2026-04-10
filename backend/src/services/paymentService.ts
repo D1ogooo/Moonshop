@@ -38,7 +38,7 @@ constructor(body: CreatePaymentRequestType, inject: InjectType<any>) {
       if (!this.frequency) {
         throw new Error("Frequency é obrigatório");
       }
-
+console.log(this.name, this.email, this.document, this.cellphone);
       const res = await this.axios.post(
         `${process.env.ABACATEPAY_BASE_URL}/billing/create`,
         {
@@ -59,6 +59,7 @@ constructor(body: CreatePaymentRequestType, inject: InjectType<any>) {
             cellphone: this.cellphone, //opcional
           },
         },
+        
         {
           headers: {
             Authorization: `Bearer ${process.env.ABACATEPAY_API_KEY}`,
