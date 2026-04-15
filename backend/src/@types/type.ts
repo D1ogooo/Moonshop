@@ -7,10 +7,12 @@ export interface CreatePaymentResponseType {
 }
 
 export interface CreateProductType {
+  id?: string;
   image?: string;
   name: string;
   amount: number;
   description: string;
+  details?: string;
 }
 
 export interface ProductType {
@@ -21,6 +23,7 @@ export interface ProductType {
 }
 
 export interface CreatePaymentRequestType {
+  id?: string;
   amount: number; // em centavos (ex: 10000 = R$100)
   description: string;
   methods?: "PIX" | "CARD" | undefined;
@@ -33,7 +36,7 @@ export interface CreatePaymentRequestType {
     name: string;
     email: string;
     cellphone?: string;
-    document?: string;
+    taxId?: string;
   };
 }
 
@@ -80,6 +83,8 @@ interface PaymentType {
 }
 
 export type InjectType<Omit> = {
+  id?: string;
   Payment?: any;
   axios?: any;
+  ProductsRegister?: any;
 };

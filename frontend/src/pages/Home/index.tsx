@@ -23,7 +23,7 @@ function Home() {
   const { toast } = useToast()
 
   function BuyProduct(NameProduct:string) {
-    api.post(`/payments/buy/${NameProduct}`)
+    api.post(`/payments/create/${NameProduct}`)
     .then((e) => {
       // window.href = `${}`
     })

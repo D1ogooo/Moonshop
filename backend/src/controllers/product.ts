@@ -22,3 +22,57 @@ export async function HandleCreateProduct(
 		return res.status(500).json({ message: "Erro interno no servidor" });
 	}
 }
+export async function HandleReadProduct(
+	req: Request<{}, {}>,
+	res: Response,
+): Promise<Response> {
+	try {
+		const service = new ProductService(req.body, { ProductsRegister }, { HttpException });
+		const product = await service.readProduct();
+		return res
+			.status(201)
+			.json(product);
+	} catch (error) {
+		console.log(error)
+		if (error instanceof HttpException) {
+			return res.status(error.statusCode).json({ message: error.message });
+		}
+		return res.status(500).json({ message: "Erro interno no servidor" });
+	}
+}
+export async function HandleUpdateProduct(
+	req: Request<{}, {}, CreateProductType>,
+	res: Response,
+): Promise<Response> {
+	try {
+		const service = new ProductService(req.body, { ProductsRegister }, { HttpException });
+		const product = await service.updateProduct();
+		return res
+			.status(201)
+			.json(product);
+	} catch (error) {
+		console.log(error)
+		if (error instanceof HttpException) {
+			return res.status(error.statusCode).json({ message: error.message });
+		}
+		return res.status(500).json({ message: "Erro interno no servidor" });
+	}
+}
+export async function HandleDeleteProduct(
+	req: Request<{}, {}, CreateProductType>,
+	res: Response,
+): Promise<Response> {
+	try {
+		const service = new ProductService(req.body, { ProductsRegister }, { HttpException });
+		const product = await service.deleteProduct();
+		return res
+			.status(201)
+			.json(product);
+	} catch (error) {
+		console.log(error)
+		if (error instanceof HttpException) {
+			return res.status(error.statusCode).json({ message: error.message });
+		}
+		return res.status(500).json({ message: "Erro interno no servidor" });
+	}
+}
